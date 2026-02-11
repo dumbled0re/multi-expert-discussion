@@ -144,6 +144,8 @@ One sentence capturing the essential insight from the entire discussion.
 Always respond in the same language as the user's input topic.
 
 ## Critical Guidelines
+- **Demand evidence**: When experts make claims, push them to cite specific company examples. "Which company has done this successfully?" is a valid challenge.
+- **Cross-reference examples**: If two experts cite contradicting examples, highlight the difference and ask what made one succeed and the other fail.
 - **NEVER skip Step 0** — always clarify the topic before starting the discussion
 - **Minimum 3 rounds, maximum 5 rounds** of discussion
 - Always launch expert agents **in parallel** within each round
