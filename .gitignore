@@ -1,0 +1,8 @@
+# Discussion output files (generated per session)
+.claude/discussion-brief.md
+.claude/final-report.md
+.claude/rounds/
+discussion-output/
+
+# Playwright MCP logs
+.playwright-mcp/

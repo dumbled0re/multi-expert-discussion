@@ -127,15 +127,18 @@ Brief summary of how the discussion evolved — what changed between rounds, wha
 ### 3. Resolved Conflicts
 For each major disagreement: what was debated, what was concluded, and why.
 
-### 4. Phased Action Plan
-- **Phase 1 (Immediate)**: Quick wins with high consensus
-- **Phase 2 (1 month)**: Medium-effort items that survived scrutiny
-- **Phase 3 (3 months)**: Strategic investments backed by evidence
+### 4. Ideas Summary Table
+A concise table listing all ideas with a brief description of each:
+| # | Idea | Description |
+|---|---|---|
 
-### 5. Risks & Dissenting Opinions
+### 5. Idea Details
+For each idea in the table above, provide a detailed explanation including technical approach, reference examples, and expected impact.
+
+### 6. Risks & Dissenting Opinions
 Honest acknowledgment of what experts still disagree on and residual risks.
 
-### 6. Core Message
+### 7. Core Message
 One sentence capturing the essential insight from the entire discussion.
 
 ---
