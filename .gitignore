@@ -1,4 +1,5 @@
 # Discussion output files (generated per session)
+discussions/
 .claude/discussion-brief.md
 .claude/final-report.md
 .claude/rounds/

@@ -143,6 +143,28 @@ One sentence capturing the essential insight from the entire discussion.
 
 ---
 
+## Output Directory Structure
+
+All output files MUST be saved under `discussions/<topic-slug>/` in the project root. The `<topic-slug>` should be a short, descriptive kebab-case name derived from the topic (e.g., `ai-cx-improvement`, `api-migration`).
+
+```
+discussions/
+  <topic-slug>/
+    brief.md              # Discussion brief (Step 1)
+    rounds/
+      round1-<expert>.md  # Each expert's response per round
+      round2-<expert>.md
+      ...
+    final-report.md       # Final synthesized report
+```
+
+**Rules**:
+- NEVER write output files to `.claude/` or any other directory
+- Create the `discussions/<topic-slug>/` directory at the start of the discussion
+- Save the brief immediately after Step 1
+- Save each expert's response as a separate file in `rounds/`
+- Save the final report at the end
+
 ## Output Language
 Always respond in the same language as the user's input topic.
 
