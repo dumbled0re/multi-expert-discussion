@@ -1,7 +1,7 @@
 ---
 name: expert-innovation-catalyst
 description: "Innovation Catalyst — runs Round 1.5 (Divergence Amplifier) on a multi-expert panel. Applies TRIZ contradiction matrix, SCAMPER mutation, assumption inversion, reverse brainstorming, and cross-domain analogy to generate useful-surprise claims. Activates only on `round: 1.5`. Optimizes for surprise, not acceptability."
-model: sonnet
+model: opus
 tools: Read, Grep, Glob, WebSearch
 ---
 

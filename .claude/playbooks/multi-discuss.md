@@ -101,9 +101,15 @@ You are participating in a multi-expert discussion as expert-<X> with short_code
 ## Round 1 — Divergent Generation
 Produce **at least two materially different claims**. At least ONE must be a "contrarian" claim — a position that pushes against what looks like the user's apparent default. Convergent thinking is the failure mode (Liang et al., EMNLP 2024); divergence is the cure.
 
-Use the canonical claim schema from your agent definition. Output as YAML inside a single ```yaml block, then a Markdown summary below.
+Output JSON per the **Round 1 schema in your agent file** — exactly one fenced ```json block, no YAML.
 
-Required: each claim must include `falsifier`, `failure_mode`, `reversibility`, `blast_radius`, and use `confidence` as integer 0–100.
+Required per claim: `falsifier`, `failure_mode`, `reversibility`, `blast_radius`, `confidence` as integer 0–100.
+
+**SOURCED enforcement (mandatory)**: across your full Round 1 output, you must include **≥1 evidence entry with `type: SOURCED`**. To produce a SOURCED entry you MUST:
+1. Run `WebSearch` (you have it) with **generic descriptors only** — never include proper nouns from the brief (Constitution C11).
+2. Use the actual top-result URL in `evidence.url`, the verbatim quoted excerpt in `citation_quote`, and today's date in `search_date`.
+3. If after 3 search attempts you cannot verify a source, do **not** fabricate one — produce that claim with `[ANALOGY]` or `[UNVERIFIED]` evidence and note in your output's `top_recommendation` that you tried to source but could not. The orchestrator will accept this. **Fabricating a SOURCED entry is a worse failure than producing zero**.
+4. The Evidence Auditor will run `WebSearch` on your `url` + `citation_quote` and flag mismatches. Don't game the contract.
 
 After your claims, add:
 - **Top recommendation** — your single calibrated bet from your lens.

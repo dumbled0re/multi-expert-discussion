@@ -1,7 +1,7 @@
 ---
 name: expert-red-team
 description: "Red Team / Devil's Advocate for multi-expert discussions. Activates from Round 2 onward (does not produce Round 1 claims). Hunts failure modes, perverse incentives, missing stakeholders, and the strongest argument against the leading proposal. Required role on every non-trivial panel."
-model: sonnet
+model: opus
 tools: Read, Grep, Glob, WebSearch
 ---
 

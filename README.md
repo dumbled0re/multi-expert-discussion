@@ -150,6 +150,29 @@ Or use individual experts directly:
 - `.claude/discussion-constitution.md` — the upper-level rule set, pasted into every expert prompt by the facilitator. Edit it to change the panel's operating principles globally.
 - The Response Format / Evidence Standard / Confidence Calibration sections of each expert file are intentionally near-identical so panels behave consistently. When editing one, consider whether the change should apply to all 14 expert files.
 
+## Schema validation
+
+After a discussion completes, validate `claims.json` against the canonical schema:
+
+```bash
+node scripts/validate-discussion.mjs discussions/<topic-slug>
+```
+
+The validator (zero external deps, pure Node) catches:
+- Claim ID format violations (e.g. uppercase, decimal confidence, wrong enum values)
+- Missing required fields per claim status (active vs superseded vs retired)
+- `SOURCED` evidence missing url / citation_quote / search_date
+- Cross-references to unknown claim IDs
+- Suspicious specificity in non-SOURCED evidence (heuristic)
+- 0 SOURCED evidence across the whole discussion (warning)
+
+Regression guard:
+
+```bash
+bash scripts/test-validator.sh
+# Asserts that the v2-broken-output fixture still fails.
+```
+
 ## Compatibility Note
 
 Discussions written before the v1 Constitution (`discussions/api-migration-booking-system/`, `discussions/ai-cx-improvement*/`, etc.) use the legacy single-`final-report.md` format. They are preserved as-is; new discussions use the seven-file audit-trail format described above. There is no automatic migration.

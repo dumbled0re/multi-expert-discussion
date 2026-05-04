@@ -160,7 +160,8 @@ You receive Round 1+1.5 raw claims with `confidence` redacted (anti-anchoring). 
 - `confidence`: integer 0–100 (NOT decimal 0–1).
 - Claim ID regex: `^C-(tl|ac|do|em|pm|ux|qa|sec|da|biz|hr|mk|rt|au|inv)-[0-9]{2}[a-z]?$`. Lowercase. Two-digit zero-padded. Revisions append a single lowercase letter.
 - Evidence `type` ∈ `{SOURCED, USER-CONTEXT, ANALOGY, EXPERT-JUDGMENT, UNVERIFIED}`.
-- `SOURCED` requires non-null `url`, `citation_quote`, `search_date`. The Evidence Auditor will challenge you.
+- `SOURCED` requires non-null `url`, `citation_quote`, `search_date`. The Evidence Auditor will run `WebSearch` to verify your URL and citation — fabrication is detected.
+- **Round 1 SOURCED minimum**: when the orchestrator asks for Round 1 with SOURCED enforcement, you MUST run `WebSearch` (with generic descriptors only — Constitution C11) and produce ≥1 SOURCED evidence in your output. If 3 search attempts cannot verify, label `[ANALOGY]` or `[UNVERIFIED]` and explain in `top_recommendation`. Fabricating a SOURCED is a worse failure than producing zero.
 - Suspicious specificity (e.g. "increased velocity 23.7%") → `SOURCED` with real reference, or downgrade to `ANALOGY`.
 - `UNVERIFIED` claims must NOT be load-bearing in `top_recommendation`.
 - Privacy (Constitution C11): never put user-brief proper nouns into `WebSearch`.

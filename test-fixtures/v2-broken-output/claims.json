@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "topic": "daily-standup-decision",
+  "generated_at": "2026-05-03",
+  "claims": [
+    {
+      "id": "C-AC-1",
+      "expert": "expert-agile-coach",
+      "round": 1,
+      "claim": "Async daily + weekly 30min sync hybrid に移行すべき",
+      "impact": "High",
+      "cost": "Low",
+      "timeline_weeks": 2,
+      "evidence_refs": ["GitLab handbook (async-first)", "Doist async ops"],
+      "confidence": 0.8,
+      "criteria_alignment": {"C1": 4, "C2": 3, "C3": 5, "C4": 3}
+    },
+    {
+      "id": "C-AC-2",
+      "expert": "expert-agile-coach",
+      "round": 1,
+      "claim": "Blocker専用channel + 30min SLA で同期Daily以上のescalation速度を実現",
+      "impact": "High",
+      "cost": "Low",
+      "timeline_weeks": 1,
+      "evidence_refs": ["Basecamp Shape Up", "Doist"],
+      "confidence": 0.75,
+      "criteria_alignment": {"C1": 3, "C2": 5, "C3": 4, "C4": 3}
+    },
+    {
+      "id": "C-EM-1",
+      "expert": "expert-em",
+      "round": 1,
+      "claim": "Daily廃止せず週2 × 15min同期に削減",
+      "impact": "Medium-High",
+      "cost": "Low",
+      "timeline_weeks": 1,
+      "evidence_refs": ["Shopify meeting purge 2023"],
+      "confidence": 0.7,
+      "criteria_alignment": {"C1": 4, "C2": 4, "C3": 3, "C4": 4}
+    },
+    {
+      "id": "C-EM-2",
+      "expert": "expert-em",
+      "round": 1,
+      "claim": "週次1on1を必須化し、blocker早期検知と心理的安全性のドライバとする",
+      "impact": "High",
+      "cost": "Medium",
+      "timeline_weeks": 1,
+      "evidence_refs": ["Google re:Work — psychological safety"],
+      "confidence": 0.9,
+      "criteria_alignment": {"C1": 3, "C2": 4, "C3": 3, "C4": 5}
+    },
+    {
+      "id": "C-TL-1",
+      "expert": "expert-tech-lead",
+      "round": 1,
+      "claim": "進捗共有はLinear cycle view + GitHub PR dashboardで完全代替可能",
+      "impact": "High",
+      "cost": "Low",
+      "timeline_weeks": 1,
+      "evidence_refs": ["Linear async-first guide"],
+      "confidence": 0.75,
+      "criteria_alignment": {"C1": 5, "C2": 3, "C3": 5, "C4": 2}
+    },
+    {
+      "id": "C-TL-2",
+      "expert": "expert-tech-lead",
+      "round": 1,
+      "claim": "週1 Tech Sync(60min)で設計討議の質を担保",
+      "impact": "Medium-High",
+      "cost": "Low",
+      "timeline_weeks": 1,
+      "evidence_refs": ["Stripe / Shopify Tech Review"],
+      "confidence": 0.7,
+      "criteria_alignment": {"C1": 4, "C2": 3, "C3": 4, "C4": 3}
+    },
+    {
+      "id": "C-DO-1",
+      "expert": "expert-devops",
+      "round": 1,
+      "claim": "Geekbot or Slack Workflow で非同期standupを自動化",
+      "impact": "High",
+      "cost": "Low",
+      "timeline_weeks": 1,
+      "evidence_refs": ["GitLab", "Buffer", "Zapier — Geekbot/Range usage"],
+      "confidence": 0.8,
+      "criteria_alignment": {"C1": 4, "C2": 3, "C3": 5, "C4": 3}
+    },
+    {
+      "id": "C-DO-2",
+      "expert": "expert-devops",
+      "round": 1,
+      "claim": "Blocker channel + on-call風 SLA でescalation構造化",
+      "impact": "High",
+      "cost": "Low",
+      "timeline_weeks": 1,
+      "evidence_refs": ["PagerDuty / Opsgenie pattern"],
+      "confidence": 0.8,
+      "criteria_alignment": {"C1": 3, "C2": 5, "C3": 4, "C4": 3}
+    },
+    {
+      "id": "C-QA-1",
+      "expert": "expert-qa-engineer",
+      "round": 1,
+      "claim": "Async移行は『沈黙のblocker』というfailure modeを生む",
+      "impact": "High (negative)",
+      "cost": "N/A",
+      "timeline_weeks": 0,
+      "evidence_refs": ["GitLab public retros — async standup fatigue"],
+      "confidence": 0.7,
+      "criteria_alignment": {"C1": -3, "C2": -4, "C3": 5, "C4": -2}
+    },
+    {
+      "id": "C-QA-2",
+      "expert": "expert-qa-engineer",
+      "round": 1,
+      "claim": "Async post自体が新たな儀式コストになる",
+      "impact": "Medium (negative)",
+      "cost": "N/A",
+      "timeline_weeks": 0,
+      "evidence_refs": ["Doist engineering blog"],
+      "confidence": 0.6,
+      "criteria_alignment": {"C1": -2, "C2": -2, "C3": -3, "C4": -1}
+    },
+    {
+      "id": "C-QA-3",
+      "expert": "expert-qa-engineer",
+      "round": 1,
+      "claim": "全廃ではなく明示的success metricsを伴うA/B trialで意思決定すべき",
+      "impact": "High",
+      "cost": "Low",
+      "timeline_weeks": 4,
+      "evidence_refs": ["Standard product experimentation practice"],
+      "confidence": 0.85,
+      "criteria_alignment": {"C1": 4, "C2": 4, "C3": 4, "C4": 4}
+    },
+    {
+      "id": "C-AU-1",
+      "expert": "expert-data-analyst",
+      "round": 1,
+      "claim": "意思決定前にベースライン2週間 + trial 4週間の指標計測が必須",
+      "impact": "High",
+      "cost": "Low",
+      "timeline_weeks": 6,
+      "evidence_refs": ["Standard A/B framework"],
+      "confidence": 0.9,
+      "criteria_alignment": {"C1": 4, "C2": 4, "C3": 4, "C4": 3}
+    },
+    {
+      "id": "C-AU-2",
+      "expert": "expert-data-analyst",
+      "round": 1,
+      "claim": "5名規模に大規模企業先行事例を直接適用するのは規模補正不足",
+      "impact": "Medium",
+      "cost": "N/A",
+      "timeline_weeks": 0,
+      "evidence_refs": ["GitLab(2000+) / Doist(80+) vs 5名のスケール差"],
+      "confidence": 0.7,
+      "criteria_alignment": {}
+    }
+  ],
+  "merged_options": [
+    {"id": "O-A", "label": "現状維持(Daily 15min × 5日)"},
+    {"id": "O-B", "label": "完全async(同期ゼロ)"},
+    {"id": "O-C", "label": "Hybrid: Async daily + 週1 30min sync + 週1 60min Tech Sync + 週次1on1"},
+    {"id": "O-D", "label": "Bi-weekly 15min同期維持 + async補完"}
+  ],
+  "winner": "O-C",
+  "borda_points": {"O-A": 2, "O-B": 7, "O-C": 17, "O-D": 10}
+}
